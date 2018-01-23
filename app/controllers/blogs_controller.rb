@@ -47,6 +47,10 @@ class BlogsController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
+
   # DELETE /blogs/1
   # DELETE /blogs/1.json
   def destroy

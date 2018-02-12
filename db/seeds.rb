@@ -38,7 +38,7 @@ end
 1.times do |portfolio_item|
   Portfolio.create!(
     title: "Portfolio title: #{portfolio_item}",
-    subtitle: "Angula"r,
+    subtitle: "Angular",
     body: "Boom shackalack doggy urna fo shizzle nisl. Bling bling fo arcu. Maecenizzle pulvinizzle, ipsizzle fo shizzle my nizzle yo mamma check it out, nulla purus euismizzle fo shizzle, izzle luctus its fo rizzle fizzle izzle dizzle. Vivamizzle ullamcorper, tortizzle et varizzle shizznit, yo mamma nizzle ultricizzle boom shackalack, in break it down leo elizzle rizzle we gonna chung.",
     main_image: "http://via.placeholder.com/600x400",
     thumb_image: "http://via.placeholder.com/350x200"
@@ -46,3 +46,11 @@ end
 end
 
 puts "9 portfolio items created"
+
+3.times do |technology|
+  Portfolio.last.technologies.create!(
+    name: "Technology #{technology}"
+  )
+end
+
+puts "3 technologies created"

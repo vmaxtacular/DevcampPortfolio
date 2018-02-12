@@ -47,6 +47,10 @@ class BlogsController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
+
   # DELETE /blogs/1
   # DELETE /blogs/1.json
   def destroy
@@ -60,7 +64,7 @@ class BlogsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
-      @blog = Blog.find(params[:id])
+      @blog = Blog.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
